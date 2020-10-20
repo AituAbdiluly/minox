@@ -1,9 +1,12 @@
 // USER VARIABLES SECTION
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
-$accent: #001e42; // Accent Color
+$accent: #173654; // Accent Color
+$secondColor: #97AEB4;
+$bgColor: #D6DEE5;
+$bgColorLight: #fff;
 $fontsize: 16px; // Body Font Size
-$textcolor: #001e42; // Text Color
+$textcolor: #173654; // Text Color
 $system: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
 $roboto: 'Inconsolata', monospace; // Roboto Font Family
 
@@ -91,6 +94,6 @@ a {
     &:hover {
         outline: none;
         text-decoration: none;
-        color: #f2c2a2;
+        color: $secondColor;
     }
 }
