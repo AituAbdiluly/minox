@@ -54,17 +54,17 @@
 
     &__mobile {
         transition: all 0.25s;
-        opacity: 0;
-        visibility: hidden;
-        top: 70px;
-        z-index: 40000;
+        top: 0;
+        left: -300px;
+        z-index: 100;
 
-        width: 100%;
+        width: 300px;
+        height: 100%;
         position: fixed;
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: $accent;
 
         &_content {
-            padding-top: 40px;
+            padding-top: 100px;
             padding-bottom: 40px;
             padding-right: 2em;
             padding-left: 2em;
@@ -76,12 +76,14 @@
 
         &_block {
             width: 48%;
-            text-align: left;
-            color: #fff;
+            text-align: center;
+            margin: 0 auto;
+
             & > div {
                 text-align: center;
             }
             a {
+                color: #fff !important;
                 display: inline-block;
                 padding: 8px 0;
                 color: $accent;
@@ -110,8 +112,7 @@
 
 .mobile-open {
     .header__mobile {
-        opacity: 1;
-        visibility: visible;
+        left: 0;
     }
 }
 
@@ -125,6 +126,7 @@
     flex-wrap: wrap;
 
     max-width: 1280px;
+    z-index: 1000;
 
     &__left {
         display: none;
@@ -295,14 +297,16 @@
 
 .open {
     .navigation__lines {
-        background-color: $bgColorLight;
+        background-color: $accent;
 
         &::before {
+            background-color: #fff;
             transform: rotate(-45deg);
             top: 0px;
         }
 
         &::after {
+            background-color: #fff;
             transform: rotate(45deg);
             top: 0px;
         }
@@ -312,8 +316,9 @@
 .hero {
     position: relative;
     min-height: 380px;
-    // background-size: cover;
-    // background-position: center center;
+    background-position: 69% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     overflow: hidden;
 
@@ -327,6 +332,7 @@
     }
 
     @media (min-width: 56.26em) {
+        background-position: center center;
         min-height: 700px;
         background-color: $bgColor;
     }
@@ -348,7 +354,6 @@
         }
 
         @media (min-width: 37.5em) {
-            background-position: 40% 50%;
             height: 100vh;
             max-height: 1200px;
         }
@@ -600,7 +605,6 @@
 
         @media (min-width: 56.26em) {
             margin-top: 30px;
-            border: 6px solid $secondColor;
         }
 
         &_img {
