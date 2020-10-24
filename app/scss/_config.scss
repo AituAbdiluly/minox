@@ -6,7 +6,7 @@ $accent: #173654; // Accent Color
 $secondColor: #f4c17f;
 $bgColor: #dbf2ff;
 $bgColorLight: #fff;
-$fontsize: 13px; // Body Font Size
+$fontsize: 11px; // Body Font Size
 $textcolor: #173654; // Text Color
 $system: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
 $roboto: 'Roboto Slab', serif; // Roboto Font Family
@@ -100,6 +100,6 @@ a {
     &:hover {
         outline: none;
         text-decoration: none;
-        color: white;
+        color: $bgColor;
     }
 }
