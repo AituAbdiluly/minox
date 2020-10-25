@@ -423,6 +423,15 @@
     padding: 1em;
     background-color: $bgColor;
 
+    ul {
+        margin: 0;
+
+        li {
+            font-size: calc((18 / 16) * 1rem);
+            line-height: 1.4;
+        }
+    }
+
     @media (min-width: 56.26em) {
         padding-top: 100px;
         padding-bottom: 100px;
@@ -465,7 +474,8 @@
         margin-left: auto;
         margin-right: auto;
 
-        left: 0;
+        border-radius: 3px;
+        overflow: hidden;
 
         @media (min-width: 56.26em) {
             text-align: left;
@@ -475,6 +485,7 @@
 
         img {
             width: 100%;
+            display: block;
         }
     }
 
@@ -1085,9 +1096,10 @@
         img {
             float: none;
             max-width: 100%;
-            width: 300px;
+            width: 300px !important;
             height: 384px;
             object-fit: cover;
+            display: inline !important;
         }
     }
 }
@@ -1122,4 +1134,10 @@
         font-size: 15px;
         font-weight: bold;
     }
+}
+
+img.lazy {
+    width: 100%;
+    display: block;
+    background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7);
 }

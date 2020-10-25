@@ -21,4 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
             nav.classList.remove('scroll');
         }
     };
+
+    $('img.lazy').lazyload();
 });
