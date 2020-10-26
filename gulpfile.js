@@ -135,7 +135,7 @@ function startwatch() {
     );
 }
 
-function images() {
+function imageDist() {
     return src('app/images/**/*').pipe(imagemin()).pipe(dest('dist/images'));
 }
 
@@ -161,7 +161,7 @@ function buildFonts() {
 function build(done) {
     return series(
         removedist,
-        images,
+        imageDist,
         styles,
         scripts,
         buildFiles,
