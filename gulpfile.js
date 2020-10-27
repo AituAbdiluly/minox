@@ -144,9 +144,12 @@ function removedist() {
 }
 
 function buildFiles() {
-    return src(['app/*.html', 'app/.htaccess', 'app/sitemap.xml']).pipe(
-        dest('dist')
-    );
+    return src([
+        'app/*.html',
+        'app/.htaccess',
+        'app/sitemap.xml',
+        'app/robots.txt',
+    ]).pipe(dest('dist'));
 }
 function buildCss() {
     return src(['app/css/app.min.css']).pipe(dest('dist/css'));
