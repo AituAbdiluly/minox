@@ -46,6 +46,7 @@ const scss = require('gulp-sass');
 const less = require('gulp-less');
 const styl = require('gulp-stylus');
 const cleancss = require('gulp-clean-css');
+const minify = require('gulp-minify');
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
 const uglify = require('gulp-uglify-es').default;
@@ -67,6 +68,7 @@ function scripts() {
     return src(paths.scripts.src)
         .pipe(concat(paths.jsOutputName))
         .pipe(uglify())
+        .pipe(minify())
         .pipe(dest(paths.scripts.dest))
         .pipe(browserSync.stream());
 }
@@ -83,7 +85,8 @@ function styles() {
         )
         .pipe(
             cleancss({
-                level: { 1: { specialComments: 0 } } /* format: 'beautify' */,
+                level: { 1: { specialComments: 0 } },
+                compatibility: 'ie8' /* format: 'beautify' */,
             })
         )
         .pipe(dest(paths.styles.dest))
