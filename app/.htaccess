@@ -1,5 +1,7 @@
 <ifModule mod_expires.c>
 
+Header set Cache-Control "max-age=2628000, public"
+
 # Add correct content-type for fonts & SVG
 AddType application/font-woff2 .woff2
 AddType image/svg+xml .svg
