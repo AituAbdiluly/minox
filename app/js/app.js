@@ -22,5 +22,5 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     };
 
-    $('img.lazy').lazyload();
+    lazyload(document.getElementsByClassName('lazy'));
 });
