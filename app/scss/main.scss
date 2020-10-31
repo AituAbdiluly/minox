@@ -499,7 +499,7 @@
         width: 100%;
         margin-top: 2em;
 
-        h3 {
+        h2 {
             opacity: 1;
             transform: translateY(0);
             transition: opacity 0.2s, transform 0.3s;
@@ -979,7 +979,7 @@
             top: 0;
             left: 0;
 
-            h5 {
+            p {
                 letter-spacing: 0.02rem;
                 font-size: calc((16 / 16) * 1rem);
                 padding-bottom: 0;
