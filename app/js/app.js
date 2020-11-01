@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Custom JS
-
+    const body = document.getElementsByTagName('body');
     const toggleBtn = document.querySelector('.js-toggle-mobile');
     const header = document.querySelector('.js-header-main');
     const nav = document.querySelector('.js-scroll');
@@ -23,4 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     lazyload(document.getElementsByClassName('lazy'));
+
+    body.addEventListener('click', function (e) {});
 });
