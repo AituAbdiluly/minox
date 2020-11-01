@@ -9,7 +9,7 @@ let preprocessor = 'scss', // Preprocessor (sass, scss, less, styl)
 let paths = {
     scripts: {
         src: [
-            // 'node_modules/jquery/dist/jquery.min.js', // npm vendor example (npm i --save-dev jquery)
+            'node_modules/jquery/dist/jquery.min.js', // npm vendor example (npm i --save-dev jquery)
             baseDir + '/js/lazy.min.js',
             baseDir + '/js/app.js', // app.js. Always at the end
         ],
@@ -69,7 +69,6 @@ function scripts() {
     return src(paths.scripts.src)
         .pipe(concat(paths.jsOutputName))
         .pipe(uglify())
-        .pipe(minify())
         .pipe(dest(paths.scripts.dest))
         .pipe(browserSync.stream());
 }
@@ -159,7 +158,7 @@ function buildCss() {
     return src(['app/css/app.min.css']).pipe(dest('dist/css'));
 }
 function buildJs() {
-    return src(['app/js/app.min.js']).pipe(dest('dist/js'));
+    return src(['app/js/app.min.js']).pipe(minify()).pipe(dest('dist/js'));
 }
 function buildFonts() {
     return src(['app/fonts/**/*']).pipe(dest('dist/fonts'));
