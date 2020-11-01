@@ -9,7 +9,7 @@ let preprocessor = 'scss', // Preprocessor (sass, scss, less, styl)
 let paths = {
     scripts: {
         src: [
-            'node_modules/jquery/dist/jquery.min.js', // npm vendor example (npm i --save-dev jquery)
+            'node_modules/lazyload/lazyload.min.js', // npm vendor example (npm i --save-dev jquery)
             baseDir + '/js/lazy.min.js',
             baseDir + '/js/app.js', // app.js. Always at the end
         ],
