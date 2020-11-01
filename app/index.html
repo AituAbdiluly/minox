@@ -36,8 +36,24 @@
         <meta property="og:image" content="images/dest/preview.jpg" />
         <link rel="stylesheet" href="css/app.min.css" />
 
-        <!-- Google Tag Manager -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <link
+            href="https://www.googletagmanager.com/gtag/js?id=G-P81WN3107B"
+            rel="preload"
+            as="script"
+        />
         <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'G-P81WN3107B');
+        </script>
+
+        <!-- Google Tag Manager -->
+        <!-- <script>
             // Load GTM for everyone except PageSpeed Insight Tool
             if (navigator.userAgent.indexOf('Chrome-Lighthouse') == -1) {
                 // Google Tag Manager as Payload for all 3rd-party JS
@@ -57,7 +73,7 @@
                 })(window, document, 'script', 'dataLayer', 'GTM-WWBH2XV');
                 // please replace GTM-K8SP5SF with own GTM ID
             }
-        </script>
+        </script> -->
         <!-- End Google Tag Manager -->
     </head>
 
